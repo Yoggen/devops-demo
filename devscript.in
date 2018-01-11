@@ -1,0 +1,5 @@
+cd /c/Users/tmp/devops-demo
+docker stop devdem
+docker rm devdem
+docker build -t dev-dem /c/Users/tmp/devops-demo
+docker run -d --name devdem -p 80:80 -v /c/Users/tmp/devops-demo/src:/var/www/html dev-dem
